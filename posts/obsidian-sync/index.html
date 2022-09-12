@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  
+    
+  
+
+  <title>Obsidian Sync | Devops Mantra</title>
+
+  
+  <meta name="author" content="Munish Mehta">
+  
+  <meta name="description" content="Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.
+What is ObsidianObsidian is a note-taking app with a focus on privacy and flexibility. All your notes live on your machine (or wherever you choose to sync them to).">
+  <meta name="keywords" content="blog,developer,personal">
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Obsidian Sync"/>
+<meta name="twitter:description" content="Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.
+What is ObsidianObsidian is a note-taking app with a focus on privacy and flexibility. All your notes live on your machine (or wherever you choose to sync them to)."/>
+
+  <meta property="og:title" content="Obsidian Sync" />
+<meta property="og:description" content="Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.
+What is ObsidianObsidian is a note-taking app with a focus on privacy and flexibility. All your notes live on your machine (or wherever you choose to sync them to)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.munish-mehta.com/posts/obsidian-sync/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-12T09:27:35+10:00" />
+<meta property="article:modified_time" content="2022-09-12T09:27:35+10:00" />
+
+
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
+  
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
+
+  
+  
+  <link rel="stylesheet" href="/sass/main.css">
+
+  
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  
+
+  <script src="/js/lazysizes.min.js"></script>
+
+  
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+</head>
+
+
+
+<body ontouchstart="">
+
+  
+  
+  
+
+  
+
+  
+  
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.munish-mehta.com/">Devops Mantra</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archive">Archive</a></li>
+          
+          <li><a href="/series/themes-guide/" title="Guide">Guide</a></li>
+          
+          <li><a href="/about/" title="About">About</a></li>
+          
+          <li><a href="https://github.com/mumehta/" title="Github">Github</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('');
+  }
+</style>
+
+<header class="intro-header style-text">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+          </div>
+          <h1>Obsidian Sync</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  Munish Mehta 
+            on Mon, Sep 12, 2022
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.</p>
+<h1 id="what-is-obsidian">What is Obsidian<a class="anchorjs-link" href="#what-is-obsidian"></a></h1><p><a href="https://obsidian.md/">Obsidian</a> is a note-taking app with a focus on privacy and flexibility. All your notes live on your machine (or wherever you choose to sync them to). Notes are written in markdown, meaning they can be easily converted to other formats or moved to another app. As of writing, it is free for personal use but not open-source. It works cross-platform on Windows, macOS, Linux, iOS and Android.</p>
+<p><a href="https://obsidian.md/">Obsidian</a> is not only an extremely useful text editing tool, but also a <strong>powerful knowledge base</strong> ; however, I will not discuss the <strong>knowledge base</strong> here, mainly based on its extreme text editing experience, combined with my short practical experience, to Share the advantages of Obsidian with your friends:</p>
+<ul>
+<li>Default <strong>WYSIWYG</strong> (wysiwyg) editing mode;</li>
+<li>Support pasting HTML to automatically convert to Markdown;</li>
+<li>All operations have <strong>shortcut keys</strong> by default, and it is easy to change by yourself;</li>
+<li>The application opens very quickly, operates smoothly, and occupies very little memory;</li>
+<li>100% free for personal use, no account or registration required;</li>
+<li><strong>Support expansion</strong> , the community has contributed <a href="https://link.segmentfault.com/?enc=GjBeNpNE0aIiH9HP%2FE%2BERQ%3D%3D.uHiTHumWkfTDHe8BqRW59n9GOn4mnZl9BRONeM2ve88%3D">nearly 600 plug-ins</a></li>
+<li>custom theme and a plugin for virtually everything</li>
+</ul>
+<h1 id="why-obsidian">Why Obsidian<a class="anchorjs-link" href="#why-obsidian"></a></h1><p>Until upto now i have been using sublime text for making any kind of notes, wheather be personal or official. I was pretty happy except for a feature i always wanted. It should be version controlled and i could have the backup and restore functionality. I also wanted to access my notes anywhere and anytime and in same format as i store them. And for this reason i started out looking out. I came across an <a href="https://segmentfault.com/a/1190000041923452/en">article</a> by jeffjade and must say i was pretty much impressed by the hype make and decided to give a try and adming that i wasn&rsquo;t disappointed after try.</p>
+<p>I love Obsidian for its command palette, customizable hotkeys, vim key bindings and versatile community plugins. Together, these features make the user experience similar to that of <a href="https://code.visualstudio.com/">Visual Studio Code</a>, the source code editor I use daily as a software engineer.</p>
+<p>I am going to focus on remote state management feature of Obsidian here.</p>
+<h2 id="remote-state-management-for-obsidian">Remote state management for obsidian<a class="anchorjs-link" href="#remote-state-management-for-obsidian"></a></h2><p>With obsidian you can manage remote state in a git repository and get back your contents by doing git pull. This means this you can get your notes anywhere and anytime. I have installed the <a href="https://github.com/denolehov/obsidian-git">git plugin</a> and can do the push of obsidian-vault to my private git repo. The instructions on the plugin page are self explantory and you can set this up for yourself. After setup you can open command palate and execute git push to push your notes to remote git repository. It works good in my experience however, i am such as lazy person and often forget to <code>commit/push</code> and therefore i wanted an automated way to push all my changes at the end of the day by itself.</p>
+<p>I have setup my system for automated push at <code>5 pm everyday</code> and you can tweek this as per your liking. <a href="https://www.munish-mehta.com/posts/obsidian-sync-script/">Part 2</a> below</p>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/posts/getting-started-with-aws/" data-toggle="tooltip" data-placement="top" title="Getting Started With AWS">
+              Previous<br>
+              <span>Getting Started With AWS</span>
+            </a>
+          </li>
+          
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+<div class="giscus" id="comments"></div>
+<script src="https://giscus.app/client.js" 
+  data-repo="roninro/hugo-theme-puppet" 
+  data-repo-id="R_kgDOHuvyhw"
+  data-category="General"
+  data-category-id="DIC_kwDOHuvyh84CQjDo"
+  data-mapping="pathname"
+  data-strict="0" 
+  data-reactions-enabled="1" 
+  data-emit-metadata="0" 
+  data-input-position="top"
+  data-theme="light_tritanopia"
+  data-lang="en"
+  crossorigin="anonymous"
+  async>
+  </script>
+
+
+
+
+      </div>
+
+      
+      
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/css/">css</a>
+    
+    <a href="/tags/documentation/">documentation</a>
+    
+    <a href="/tags/emoji/">emoji</a>
+    
+    <a href="/tags/guide/">guide</a>
+    
+    <a href="/tags/html/">html</a>
+    
+    <a href="/tags/markdown/">markdown</a>
+    
+    <a href="/tags/privacy/">privacy</a>
+    
+    <a href="/tags/shortcodes/">shortcodes</a>
+    
+    <a href="/tags/text/">text</a>
+    
+  </div>
+</section>
+
+        
+        
+
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://gohugo.io" target="_blank">Munish Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Divya Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Navya Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Paarth Mehta</a></li>
+  
+</ul>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        
+
+
+<ul class="list-inline text-center">
+
+  
+  <li>
+    <a href="/index.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a href="https://twitter.com/MehtaAu">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.facebook.com/munish.mehta1">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/mumehta">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.linkedin.com/in/mehtamunish">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+</ul>
+        <p class="copyright text-muted">
+          Copyright &copy; Devops Mantra 2022
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+</body>
+
+</html>
