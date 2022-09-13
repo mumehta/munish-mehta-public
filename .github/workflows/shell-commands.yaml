@@ -1,0 +1,14 @@
+name: test-running-commands
+
+on: [push]
+
+jobs:
+  run-commands:
+    runs-on: ubuntu:latest
+    steps:
+      - name: runner host machine name
+        run: echo "hostname: $HOSTNAME"
+      - name: multiline script - check node and npm version
+        run: |
+          node -v
+          npm -v
