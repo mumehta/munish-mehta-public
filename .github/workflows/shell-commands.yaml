@@ -7,10 +7,8 @@ jobs:
     runs-on: ubuntu:latest
     steps:
       - name: runner host machine name
-        run:
-          shell: echo "hostname: $HOSTNAME"
+        run: echo "hostname: ${HOSTNAME}"
       - name: multiline script - check node and npm version
-        run:
-          shell: |
-            node -v
-            npm -v
+        run: |
+          node -v
+          npm -v
