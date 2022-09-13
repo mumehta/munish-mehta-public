@@ -13,3 +13,15 @@ jobs:
         run: |
           node -v
           npm -v
+      - name: python command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
+  # push-to-s3:
+  #   name: push static contents to s3 bucket munish-mehta.com
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: checkout and push to static bucket
+  #       uses: actions@checkout-V3
+  #       run: aws s3 push . s3://www-munish-mehta-com-s3-static-sites/
