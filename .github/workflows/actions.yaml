@@ -15,4 +15,8 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
+          git config user.name "Munish Mehta"
+          git config credential.username mumehta
+          git config user.email munish.mehta.au@gmail.com
+          git config core.sshCommand "ssh -i ~/.ssh/id_ed25519"
           git clone git@github.com:$GITHUB_REPOSITORY
