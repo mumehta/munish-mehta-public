@@ -5,13 +5,16 @@ jobs:
   copy-to-s3:
     name: copy to s3
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: write
     steps:
       - name: checkout public
         uses: actions/checkout@v3
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: my-github-actions-role
+          role-to-assume: www-munish-mehta-com-s3-static-sites
           aws-region: ap-southeast-2
           role-session-name: s3-sync-session
       - name: sync to s3
