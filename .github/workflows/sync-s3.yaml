@@ -8,16 +8,17 @@ jobs:
     permissions:
       id-token: write
       contents: write
+    env:
+      ACCOUNT_ID: 187981695199
     steps:
       - name: checkout public
         uses: actions/checkout@v3
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: www-munish-mehta-com-s3-static-sites
+          role-to-assume: arn:aws:iam::${{ env.ACCOUNT_ID }}:role/www-munish-mehta-com-s3-static-sites
           aws-region: ap-southeast-2
           role-session-name: s3-sync-session
-          source-account-id: 187981695199
       - name: sync to s3
         run: |
           echo "present working directory: `pwd`"
