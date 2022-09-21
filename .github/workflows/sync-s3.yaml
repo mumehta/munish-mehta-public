@@ -2,7 +2,7 @@ name: sync public to s3 static site
 on:
   - push
 jobs:
-  copy to s3:
+  copy-to-s3:
     name: copy to s3
     runs-on: ubuntu-latest
     steps:
