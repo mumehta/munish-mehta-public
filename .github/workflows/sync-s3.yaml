@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
-      contents: write
+      contents: read
     env:
       ACCOUNT_ID: 187981695199
     steps:
