@@ -17,6 +17,7 @@ jobs:
           role-to-assume: www-munish-mehta-com-s3-static-sites
           aws-region: ap-southeast-2
           role-session-name: s3-sync-session
+          source-account-id: 187981695199
       - name: sync to s3
         run: |
           echo "present working directory: `pwd`"
