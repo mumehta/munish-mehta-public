@@ -268,25 +268,29 @@
 
         
         
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-www-munish-mehta-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
 
-<div class="giscus" id="comments"></div>
-<script src="https://giscus.app/client.js" 
-  data-repo="roninro/hugo-theme-puppet" 
-  data-repo-id="R_kgDOHuvyhw"
-  data-category="General"
-  data-category-id="DIC_kwDOHuvyh84CQjDo"
-  data-mapping="pathname"
-  data-strict="0" 
-  data-reactions-enabled="1" 
-  data-emit-metadata="0" 
-  data-input-position="top"
-  data-theme="light_tritanopia"
-  data-lang="en"
-  crossorigin="anonymous"
-  async>
-  </script>
 
 
 
@@ -354,7 +358,23 @@
     </div>
   </div>
 </article>
+  
+  <div id="disqus_thread">
+  <script>
+      
 
+      
+
+      (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-www-munish-mehta-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
 
 
   
@@ -453,10 +473,22 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZRV174YST"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-2ZRV174YST', { 'anonymize_ip': false });
+}
+</script>
+
 
 
 
 <script src="/zoomjs/zoom.min.js"></script>
+  <script id="dsq-count-scr" src="//https-www-munish-mehta-com.disqus.com/count.js" async></script>
 </body>
 
 </html>
