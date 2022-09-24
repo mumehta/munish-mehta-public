@@ -32,37 +32,47 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
 No, you are not alone. It is totally natural to get overwhalmed with so many services offered by AWS. Here, i aim to provide just enough information to get started. AWS, or Amazon Web Services does not need any introduction. It is market leader and 80% of cloud workload is on AWS.
 Sometime, i wonder there should be a guide of simple steps that should guide me just enough to get started with my AWS account." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.munish-mehta.com/blog/posts/getting-started-with-aws/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://www.munish-mehta.com/posts/getting-started-with-aws/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-11T19:18:20+10:00" />
 <meta property="article:modified_time" content="2022-09-11T19:18:20+10:00" />
-<meta property="og:see_also" content="https://www.munish-mehta.com/blog/posts/getting-started/" /><meta property="og:see_also" content="https://www.munish-mehta.com/blog/posts/markdown-syntax/" />
+<meta property="og:see_also" content="https://www.munish-mehta.com/posts/getting-started/" /><meta property="og:see_also" content="https://www.munish-mehta.com/posts/markdown-syntax/" />
 
 
 
-  <link rel="stylesheet" href="https://www.munish-mehta.com/blog/css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
   
   <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
     type="text/css">
 
   
   
-  <link rel="stylesheet" href="https://www.munish-mehta.com/blog/sass/main.css">
+  <link rel="stylesheet" href="/sass/main.css">
 
   
-  <link rel="stylesheet" href="https://www.munish-mehta.com/blog/zoomjs/zoom.min.css">
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
 
   
 
-  <script src="https://www.munish-mehta.com/blog/js/lazysizes.min.js"></script>
+  <script src="/js/lazysizes.min.js"></script>
 
   
   
 
   
-  <link rel="apple-touch-icon" sizes="180x180" href="https://www.munish-mehta.com/blog/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="https://www.munish-mehta.com/blog/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://www.munish-mehta.com/blog/favicon-16x16.png">
-  <link rel="manifest" href="https://www.munish-mehta.com/blog/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  
+  <script>
+    var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.2.1";
+
+    !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+    (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+    i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+    }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+    </script>
   
 </head>
 
@@ -93,20 +103,20 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://www.munish-mehta.com/blog/">Devops Mantra</a>
+      <a class="navbar-brand" href="https://www.munish-mehta.com/">Devops Mantra</a>
     </div>
     
     <div id="huxblog_navbar">
       <div class="navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
           
-          <li><a href="https://www.munish-mehta.com/blog/" title="Home">Home</a></li>
+          <li><a href="/" title="Home">Home</a></li>
           
-          <li><a href="https://www.munish-mehta.com/blog/archive/" title="Archive">Archive</a></li>
+          <li><a href="/archive/" title="Archive">Archive</a></li>
           
-          <li><a href="https://www.munish-mehta.com/blog/series/themes-guide/" title="Guide">Guide</a></li>
+          <li><a href="/series/themes-guide/" title="Guide">Guide</a></li>
           
-          <li><a href="https://www.munish-mehta.com/blog/about/" title="About">About</a></li>
+          <li><a href="/about/" title="About">About</a></li>
           
           <li><a href="https://github.com/mumehta/" title="Github">Github</a></li>
           
@@ -205,16 +215,16 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
         <div class="post-heading">
           <div class="tags">
             
-            <a class="tag" href="https://www.munish-mehta.com/blog/tags/documentation/" title="documentation">documentation</a>
+            <a class="tag" href="/tags/documentation/" title="documentation">documentation</a>
             
-            <a class="tag" href="https://www.munish-mehta.com/blog/tags/guide/" title="guide">guide</a>
+            <a class="tag" href="/tags/guide/" title="guide">guide</a>
             
           </div>
           <h1>Getting Started With AWS</h1>
           <h2 class="subheading"></h2>
           <span class="meta">
             Posted by  Munish Mehta 
-            on Sun, Sep 11, 2022
+            on Sun, Sep 11, 2022 <a href="#disqus_thread" style="color:red;flex: 1; text-align: right; white-space: nowrap; float: right"></a>
           </span>
         </div>
       </div>
@@ -257,12 +267,12 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
 <h2 id="how-do-i-go-about-it">How do i go about it?<a class="anchorjs-link" href="#how-do-i-go-about-it"></a></h2><p>It all starts from creating your VPC.</p>
 <p>On your AWS console dashboard, <figure>
   <a class="paragraph-image">
-    <img data-src="https://www.munish-mehta.com/blog/images/dashboard.JPG" data-action="zoom" alt="services"  class="lazyload">
+    <img data-src="/images/dashboard.JPG" data-action="zoom" alt="services"  class="lazyload">
   </a>
   
 </figure> click services and then select VPC service. In the next screen, “Start VPC Wizard” <figure>
   <a class="paragraph-image">
-    <img data-src="https://www.munish-mehta.com/blog/images/Start-vpc-wizard.JPG" data-action="zoom" alt="start vpc wizard"  class="lazyload">
+    <img data-src="/images/Start-vpc-wizard.JPG" data-action="zoom" alt="start vpc wizard"  class="lazyload">
   </a>
   
 </figure></p>
@@ -271,7 +281,7 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
 <h3 id="step-2">step 2:<a class="anchorjs-link" href="#step-2"></a></h3><hr>
 <p>Fill in following values: <figure>
   <a class="paragraph-image">
-    <img data-src="https://www.munish-mehta.com/blog/images/step2-create-vpc.JPG" data-action="zoom" alt="create vpc"  class="lazyload">
+    <img data-src="/images/step2-create-vpc.JPG" data-action="zoom" alt="create vpc"  class="lazyload">
   </a>
   
 </figure> Here i have chosen “Availability Zone” ap-southeast-2a as i am in sydney region. You might want to select the value as per your availability zone.</p>
@@ -287,13 +297,13 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
 <p>Select “Your VPCs” from left pane and select your created vpc row. I have selected “example-vpc” which i created above.</p>
 <p>In the table below, select the route table. In next screen select the route table row. You can see, your VPC’s default main table resolves internal traffic only. (If not obvious, select the row table and Routes tab in lower part of the window) <figure>
   <a class="paragraph-image">
-    <img data-src="https://www.munish-mehta.com/blog/images/default-table-and-route.JPG" data-action="zoom" alt="&lt;default table and route&gt;"  class="lazyload">
+    <img data-src="/images/default-table-and-route.JPG" data-action="zoom" alt="&lt;default table and route&gt;"  class="lazyload">
   </a>
   
 </figure></p>
 <p>Now, select “Subnet” from left pane, and select “public subnet 2a” row for example vpc. <figure>
   <a class="paragraph-image">
-    <img data-src="https://www.munish-mehta.com/blog/images/public-subnet-2a.JPG" data-action="zoom" alt="&amp;lt;public subnet 2a&amp;gt;"  class="lazyload">
+    <img data-src="/images/public-subnet-2a.JPG" data-action="zoom" alt="&amp;lt;public subnet 2a&amp;gt;"  class="lazyload">
   </a>
   
 </figure><br>
@@ -343,7 +353,7 @@ Wait, until “Status Check” Column changes hourglass to 2/2 check pass status
 <li>
 <p>If there is no public ip, you need to create and assign to it. For this, <figure>
   <a class="paragraph-image">
-    <img data-src="https://www.munish-mehta.com/blog/images/Elastic-IP.JPG" data-action="zoom" alt="&lt;Elastic IP&gt;"  class="lazyload">
+    <img data-src="/images/Elastic-IP.JPG" data-action="zoom" alt="&lt;Elastic IP&gt;"  class="lazyload">
   </a>
   
 </figure> select the “Elastic IP” from left hand pane, and click “Allocate New Address”. Once you have IP address, select that row and click “Action” -&gt; “Associate IP Address” and search and attach your instance id with it. It should come automatically in drop down below and you have to pick and select it.</p>
@@ -383,7 +393,7 @@ Open Git bash from your windows.</p>
         <ul class="pager">
           
           <li class="previous">
-            <a href="https://www.munish-mehta.com/blog/posts/getting-started/" data-toggle="tooltip" data-placement="top" title="Puppet - Getting Started">
+            <a href="/posts/getting-started/" data-toggle="tooltip" data-placement="top" title="Puppet - Getting Started">
               Previous<br>
               <span>Puppet - Getting Started</span>
             </a>
@@ -391,7 +401,7 @@ Open Git bash from your windows.</p>
           
           
           <li class="next">
-            <a href="https://www.munish-mehta.com/blog/posts/obsidian-sync/" data-toggle="tooltip" data-placement="top" title="Obsidian Sync">
+            <a href="/posts/obsidian-sync/" data-toggle="tooltip" data-placement="top" title="Obsidian Sync">
               Next<br>
               <span>Obsidian Sync</span>
             </a>
@@ -464,23 +474,23 @@ Open Git bash from your windows.</p>
   <h5>FEATURED TAGS</h5>
   <div class="tags">
     
-    <a href="https://www.munish-mehta.com/blog/tags/css/">css</a>
+    <a href="/tags/css/">css</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/documentation/">documentation</a>
+    <a href="/tags/documentation/">documentation</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/emoji/">emoji</a>
+    <a href="/tags/emoji/">emoji</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/guide/">guide</a>
+    <a href="/tags/guide/">guide</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/html/">html</a>
+    <a href="/tags/html/">html</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/markdown/">markdown</a>
+    <a href="/tags/markdown/">markdown</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/privacy/">privacy</a>
+    <a href="/tags/privacy/">privacy</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/shortcodes/">shortcodes</a>
+    <a href="/tags/shortcodes/">shortcodes</a>
     
-    <a href="https://www.munish-mehta.com/blog/tags/text/">text</a>
+    <a href="/tags/text/">text</a>
     
   </div>
 </section>
@@ -538,7 +548,7 @@ Open Git bash from your windows.</p>
 
   
   <li>
-    <a href="https://www.munish-mehta.com/blog/index.xml">
+    <a href="/index.xml">
       <span class="fa-stack fa-lg">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -599,18 +609,18 @@ Open Git bash from your windows.</p>
   </div>
 </footer>
 
-<script src="https://www.munish-mehta.com/blog/js/jquery.min.js"></script>
-<script src="https://www.munish-mehta.com/blog/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
 
 
-<script src="https://www.munish-mehta.com/blog/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
 
 
-<script src="https://www.munish-mehta.com/blog/js/simple-jekyll-search.min.js"></script>
+<script src="/js/simple-jekyll-search.min.js"></script>
 
 
-<script src="https://www.munish-mehta.com/blog/js/search.min.8de9938f1df1a74dbbb80d7c291834633573d6ee07ee3cbd6a9a5d01243d5b4b.js"></script>
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
 
 
 
@@ -647,7 +657,7 @@ Open Git bash from your windows.</p>
 </script>
 
 
-<script type="text/javascript" src='https://www.munish-mehta.com/blog/js/jquery.nav.min.ade6bde8f9fcc6a4b40852cb892e9f5912340ab8fe1305149d917fdd16fffd8d.js'></script>
+<script type="text/javascript" src='/js/jquery.nav.min.ade6bde8f9fcc6a4b40852cb892e9f5912340ab8fe1305149d917fdd16fffd8d.js'></script>
 <script>
    $(document).ready( function () {
     $('.catalog-body').onePageNav({
@@ -685,7 +695,7 @@ if (!doNotTrack) {
 
 
 
-<script src="https://www.munish-mehta.com/blog/zoomjs/zoom.min.js"></script>
+<script src="/zoomjs/zoom.min.js"></script>
   <script id="dsq-count-scr" src="//https-www-munish-mehta-com.disqus.com/count.js" async></script>
 </body>
 

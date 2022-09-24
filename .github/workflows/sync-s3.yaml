@@ -19,6 +19,19 @@ jobs:
           role-to-assume: arn:aws:iam::${{ env.ACCOUNT_ID }}:role/www-munish-mehta-com-s3-static-sites
           aws-region: ap-southeast-2
           role-session-name: s3-sync-session
+      # It will expose my secrets eek!
+      # - name: Delete .env if exists
+      #   run: |
+      #     [ -e ./.env ] && rm ./.env
+      # - name: Make algolia .env
+      #   uses: SpicyPizza/create-envfile@v1.3
+      #   with:
+      #     envkey_ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+      #     envkey_ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_APP_ID }}
+      #     envkey_ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
+      #     envkey_ALGOLIA_INDEX_FILE: ${{ secrets.ALGOLIA_INDEX_FILE }}
+      #     file_name: .env
+      #     fail_on_empty: false
       - name: sync to s3
         run: |
           echo "present working directory: `pwd`"

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About on Devops Mantra</title>
-    <link>https://www.munish-mehta.com/blog/about/</link>
+    <link>https://www.munish-mehta.com/about/</link>
     <description>Recent content in About on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.munish-mehta.com/blog/about/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://www.munish-mehta.com/about/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
