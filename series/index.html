@@ -56,6 +56,16 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
   
+  
+  <script>
+    var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.2.1";
+
+    !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+    (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+    i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+    }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+    </script>
+  
 </head>
 
 
@@ -322,10 +332,22 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZRV174YST"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-2ZRV174YST', { 'anonymize_ip': false });
+}
+</script>
+
 
 
 
 <script src="/zoomjs/zoom.min.js"></script>
+  <script id="dsq-count-scr" src="//https-www-munish-mehta-com.disqus.com/count.js" async></script>
 </body>
 
 </html>
