@@ -3,7 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.munish-mehta.com/</loc>
-    <lastmod>2022-11-06T12:00:35+11:00</lastmod>
+    <lastmod>2023-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.munish-mehta.com/about/</loc>
+    <lastmod>2023-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.munish-mehta.com/tags/guide/</loc>
     <lastmod>2022-11-06T12:00:35+11:00</lastmod>
@@ -91,9 +94,6 @@
   </url><url>
     <loc>https://www.munish-mehta.com/posts/emoji-support/</loc>
     <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.munish-mehta.com/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.munish-mehta.com/archive/</loc>
   </url>
