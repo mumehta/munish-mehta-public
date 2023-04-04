@@ -6,18 +6,7 @@
     <description>Recent content in Themes Guide on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Sep 2022 19:18:20 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Getting Started With AWS</title>
-      <link>https://www.munish-mehta.com/posts/getting-started-with-aws/</link>
-      <pubDate>Sun, 11 Sep 2022 19:18:20 +1000</pubDate>
-      
-      <guid>https://www.munish-mehta.com/posts/getting-started-with-aws/</guid>
-      <description>Confused and Puzzeled how and where to get started?
-No, you are not alone. It is totally natural to get overwhalmed with so many services offered by AWS. Here, i aim to provide just enough information to get started. AWS, or Amazon Web Services does not need any introduction. It is market leader and 80% of cloud workload is on AWS.
-Sometime, i wonder there should be a guide of simple steps that should guide me just enough to get started with my AWS account.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 09 Aug 2022 15:38:30 +0800</lastBuildDate><atom:link href="https://www.munish-mehta.com/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Puppet - Getting Started</title>
       <link>https://www.munish-mehta.com/posts/getting-started/</link>

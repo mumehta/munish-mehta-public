@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Sep 2022 19:18:20 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 12:00:35 +1100</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>guide</title>
+      <link>https://www.munish-mehta.com/tags/guide/</link>
+      <pubDate>Sun, 06 Nov 2022 12:00:35 +1100</pubDate>
+      
+      <guid>https://www.munish-mehta.com/tags/guide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://www.munish-mehta.com/tags/linux/</link>
+      <pubDate>Sun, 06 Nov 2022 12:00:35 +1100</pubDate>
+      
+      <guid>https://www.munish-mehta.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>documentation</title>
       <link>https://www.munish-mehta.com/tags/documentation/</link>
       <pubDate>Sun, 11 Sep 2022 19:18:20 +1000</pubDate>
       
       <guid>https://www.munish-mehta.com/tags/documentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>guide</title>
-      <link>https://www.munish-mehta.com/tags/guide/</link>
-      <pubDate>Sun, 11 Sep 2022 19:18:20 +1000</pubDate>
-      
-      <guid>https://www.munish-mehta.com/tags/guide/</guid>
       <description></description>
     </item>
     
