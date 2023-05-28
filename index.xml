@@ -2,27 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Devops Mantra</title>
-    <link>https://www.munish-mehta.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Apr 2023 21:22:51 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 May 2023 00:26:41 +1000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unsung Heros of Interconnected world - APIs</title>
+      <link>http://localhost:1313/posts/api/</link>
+      <pubDate>Mon, 29 May 2023 00:26:41 +1000</pubDate>
+      
+      <guid>http://localhost:1313/posts/api/</guid>
+      <description>In this series of article i would be explaining what is an API and what are the uses. How is it useful and what are the types of APIs. In other  parts of the series i would be discussing other aspects of API such as authenication and authorization, securing API, data validation, rate limiting and throttling, error handling and logging, secure storage solutions, least previlages prinicples, security testing, regular updates and patching and api documentation and education.</description>
+    </item>
+    
     <item>
       <title>Installing Jupyter Notebook in virtual env</title>
-      <link>https://www.munish-mehta.com/posts/installing-jupyter-notebook-with-virtualenv/</link>
+      <link>http://localhost:1313/posts/installing-jupyter-notebook-with-virtualenv/</link>
       <pubDate>Sat, 29 Apr 2023 21:22:51 +1000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/installing-jupyter-notebook-with-virtualenv/</guid>
+      <guid>http://localhost:1313/posts/installing-jupyter-notebook-with-virtualenv/</guid>
       <description>Jupyter Notebook is a popular choice among data scientist and data engineer developing application. There are numerous factors of why Jupyter Notebooks are preferred choice for getting up and running quickly. There are several posts why they do so. This article on real python nicely explains.
 Here i would be describing how to install Jupyter Notebook in a personal laptop and getting up and running quickly. If you aren&amp;rsquo;t familiar with virtual env or venv, you can refer to this post.</description>
     </item>
     
     <item>
       <title>Obsidian Sync as service</title>
-      <link>https://www.munish-mehta.com/posts/obsidian-sync-part3/</link>
+      <link>http://localhost:1313/posts/obsidian-sync-part3/</link>
       <pubDate>Sun, 06 Nov 2022 12:00:35 +1100</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/obsidian-sync-part3/</guid>
+      <guid>http://localhost:1313/posts/obsidian-sync-part3/</guid>
       <description>This post is third and final part of the series where i am demostrating to setup automated remote state management of our notes. Before continuing here, i would recommend to go through part-1 and part-2 of the sereis.
 Service and TimerCreate a systemd service and a timer . The function of timer unit is to trigger service unit and the service unit will execute the obsidian-sync script
 Timer UnitCreate a timer obsidian-sync.</description>
@@ -30,10 +39,10 @@ Timer UnitCreate a timer obsidian-sync.</description>
     
     <item>
       <title>Obsidian Sync script</title>
-      <link>https://www.munish-mehta.com/posts/obsidian-sync-part2/</link>
+      <link>http://localhost:1313/posts/obsidian-sync-part2/</link>
       <pubDate>Sat, 05 Nov 2022 21:17:37 +1100</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/obsidian-sync-part2/</guid>
+      <guid>http://localhost:1313/posts/obsidian-sync-part2/</guid>
       <description>This is the second part of three part post series. Be sure to checkout part-1 before continuing here.
 In this post I am going to create a script which does only one thing: Take all uncommitted changes and pushes them to remote repository. In next part of the series we will create a systemd service and systemd timer to timely execute this script.
 High level planThere are three parts to achieve successful state.</description>
@@ -41,20 +50,20 @@ High level planThere are three parts to achieve successful state.</description>
     
     <item>
       <title>Obsidian Sync</title>
-      <link>https://www.munish-mehta.com/posts/obsidian-sync/</link>
+      <link>http://localhost:1313/posts/obsidian-sync/</link>
       <pubDate>Mon, 12 Sep 2022 09:27:35 +1000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/obsidian-sync/</guid>
+      <guid>http://localhost:1313/posts/obsidian-sync/</guid>
       <description>Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.
 What is ObsidianObsidian is a note-taking app with a focus on privacy and flexibility. All your notes live on your machine (or wherever you choose to sync them to).</description>
     </item>
     
     <item>
       <title>Getting Started With AWS</title>
-      <link>https://www.munish-mehta.com/posts/getting-started-with-aws/</link>
+      <link>http://localhost:1313/posts/getting-started-with-aws/</link>
       <pubDate>Sun, 11 Sep 2022 19:18:20 +1000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/getting-started-with-aws/</guid>
+      <guid>http://localhost:1313/posts/getting-started-with-aws/</guid>
       <description>Confused and Puzzeled how and where to get started?
 No, you are not alone. It is totally natural to get overwhalmed with so many services offered by AWS. Here, i aim to provide just enough information to get started. AWS, or Amazon Web Services does not need any introduction. It is market leader and 80% of cloud workload is on AWS.
 Sometime, i wonder there should be a guide of simple steps that should guide me just enough to get started with my AWS account.</description>
@@ -62,55 +71,55 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
     
     <item>
       <title>Puppet - Getting Started</title>
-      <link>https://www.munish-mehta.com/posts/getting-started/</link>
+      <link>http://localhost:1313/posts/getting-started/</link>
       <pubDate>Tue, 09 Aug 2022 15:38:30 +0800</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/getting-started/</guid>
+      <guid>http://localhost:1313/posts/getting-started/</guid>
       <description>&lt;p&gt;Puppet is a responsive, simple and clean &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; theme based on the &lt;a href=&#34;https://github.com/Huxpro/huxpro.github.io&#34;&gt;Huxblog Jekyll theme&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://www.munish-mehta.com/posts/markdown-syntax/</link>
+      <link>http://localhost:1313/posts/markdown-syntax/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/markdown-syntax/</guid>
+      <guid>http://localhost:1313/posts/markdown-syntax/</guid>
       <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Rich Content</title>
-      <link>https://www.munish-mehta.com/posts/rich-content/</link>
+      <link>http://localhost:1313/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/rich-content/</guid>
+      <guid>http://localhost:1313/posts/rich-content/</guid>
       <description>&lt;p&gt;Hugo ships with several &lt;a href=&#34;https://gohugo.io/content-management/shortcodes/#use-hugos-built-in-shortcodes&#34;&gt;Built-in Shortcodes&lt;/a&gt; for rich content, along with a &lt;a href=&#34;https://gohugo.io/about/hugo-and-gdpr/&#34;&gt;Privacy Config&lt;/a&gt; and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Placeholder Text</title>
-      <link>https://www.munish-mehta.com/posts/placeholder-text/</link>
+      <link>http://localhost:1313/posts/placeholder-text/</link>
       <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/placeholder-text/</guid>
+      <guid>http://localhost:1313/posts/placeholder-text/</guid>
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Math Typesetting</title>
-      <link>https://www.munish-mehta.com/posts/math-typesetting/</link>
+      <link>http://localhost:1313/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/math-typesetting/</guid>
+      <guid>http://localhost:1313/posts/math-typesetting/</guid>
       <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Emoji Support</title>
-      <link>https://www.munish-mehta.com/posts/emoji-support/</link>
+      <link>http://localhost:1313/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://www.munish-mehta.com/posts/emoji-support/</guid>
+      <guid>http://localhost:1313/posts/emoji-support/</guid>
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     

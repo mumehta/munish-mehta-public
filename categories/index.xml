@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Devops Mantra</title>
-    <link>https://www.munish-mehta.com/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Apr 2023 21:22:51 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 May 2023 00:26:41 +1000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Development</title>
-      <link>https://www.munish-mehta.com/categories/development/</link>
-      <pubDate>Sat, 29 Apr 2023 21:22:51 +1000</pubDate>
+      <link>http://localhost:1313/categories/development/</link>
+      <pubDate>Mon, 29 May 2023 00:26:41 +1000</pubDate>
       
-      <guid>https://www.munish-mehta.com/categories/development/</guid>
+      <guid>http://localhost:1313/categories/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>syntax</title>
-      <link>https://www.munish-mehta.com/categories/syntax/</link>
+      <link>http://localhost:1313/categories/syntax/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.munish-mehta.com/categories/syntax/</guid>
+      <guid>http://localhost:1313/categories/syntax/</guid>
       <description></description>
     </item>
     
     <item>
       <title>themes</title>
-      <link>https://www.munish-mehta.com/categories/themes/</link>
+      <link>http://localhost:1313/categories/themes/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://www.munish-mehta.com/categories/themes/</guid>
+      <guid>http://localhost:1313/categories/themes/</guid>
       <description></description>
     </item>
     

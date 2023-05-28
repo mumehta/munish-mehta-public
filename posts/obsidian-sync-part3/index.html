@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,10 +32,10 @@ Timer UnitCreate a timer obsidian-sync."/>
 Service and TimerCreate a systemd service and a timer . The function of timer unit is to trigger service unit and the service unit will execute the obsidian-sync script
 Timer UnitCreate a timer obsidian-sync." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.munish-mehta.com/posts/obsidian-sync-part3/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/obsidian-sync-part3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-11-06T12:00:35+11:00" />
 <meta property="article:modified_time" content="2022-11-06T12:00:35+11:00" />
-<meta property="og:see_also" content="https://www.munish-mehta.com/posts/obsidian-sync-part2/" /><meta property="og:see_also" content="https://www.munish-mehta.com/posts/obsidian-sync/" />
+<meta property="og:see_also" content="http://localhost:1313/posts/obsidian-sync-part2/" /><meta property="og:see_also" content="http://localhost:1313/posts/obsidian-sync/" />
 
 
 
@@ -105,7 +105,7 @@ Timer UnitCreate a timer obsidian-sync." />
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://www.munish-mehta.com/">Devops Mantra</a>
+      <a class="navbar-brand" href="http://localhost:1313/">Devops Mantra</a>
     </div>
     
     <div id="huxblog_navbar">
@@ -241,13 +241,11 @@ Timer UnitCreate a timer obsidian-sync." />
 <article>
   <div class="container">
     <div class="row">
-
       
-      <div class="
-              col-lg-8 col-lg-offset-2
-              col-md-10 col-md-offset-1
-              post-container">
-        <p>This post is third and final part of the series where i am demostrating to setup automated remote state management of our notes. Before continuing here, i would recommend to go through <a href="https://www.munish-mehta.com/posts/obsidian-sync/" title="Obsidian Sync">part-1</a> and <a href="https://www.munish-mehta.com/posts/obsidian-sync-part2/" title="Obsidian Sync script">part-2</a> of the sereis.</p>
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+         <p>This post is third and final part of the series where i am demostrating to setup automated remote state management of our notes. Before continuing here, i would recommend to go through <a href="http://localhost:1313/posts/obsidian-sync/" title="Obsidian Sync">part-1</a> and <a href="http://localhost:1313/posts/obsidian-sync-part2/" title="Obsidian Sync script">part-2</a> of the sereis.</p>
 <h2 id="service-and-timer">Service and Timer<a class="anchorjs-link" href="#service-and-timer"></a></h2><p>Create a systemd <code>service</code> and a <code>timer</code> . The function of <code>timer</code> unit is to trigger <code>service</code> unit and the <code>service</code> unit will execute the <code>obsidian-sync</code> script</p>
 <h3 id="timer-unit">Timer Unit<a class="anchorjs-link" href="#timer-unit"></a></h3><h4 id="create-a-timer-obsidian-synctimer-unit">Create a timer <code>obsidian-sync.timer</code> unit<a class="anchorjs-link" href="#create-a-timer-obsidian-synctimer-unit"></a></h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Shell" data-lang="Shell"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>bash -c <span style="color:#f1fa8c">&#34;cat &gt;</span><span style="color:#8be9fd;font-style:italic">$HOME</span><span style="color:#f1fa8c">/.config/systemd/user/obsidian-push.timer&#34;</span> <span style="color:#f1fa8c">&lt;&lt;EOF
 </span></span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#f1fa8c"># Timer for obsidian-push.service
@@ -320,26 +318,35 @@ Timer UnitCreate a timer obsidian-sync." />
 </ul>
 
 
-        <hr style="visibility: hidden;" />
+        <hr style="visibility: hidden" />
         <ul class="pager">
           
           <li class="previous">
-            <a href="/posts/obsidian-sync-part2/" data-toggle="tooltip" data-placement="top" title="Obsidian Sync script">
-              Previous<br>
+            <a
+              href="/posts/obsidian-sync-part2/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Obsidian Sync script"
+            >
+              Previous<br />
               <span>Obsidian Sync script</span>
             </a>
           </li>
-          
-          
+           
           <li class="next">
-            <a href="/posts/installing-jupyter-notebook-with-virtualenv/" data-toggle="tooltip" data-placement="top" title="Installing Jupyter Notebook in virtual env">
-              Next<br>
+            <a
+              href="/posts/installing-jupyter-notebook-with-virtualenv/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Installing Jupyter Notebook in virtual env"
+            >
+              Next<br />
               <span>Installing Jupyter Notebook in virtual env</span>
             </a>
           </li>
           
         </ul>
-        <hr style="visibility: hidden;" />
+        <hr style="visibility: hidden" />
 
         
         
@@ -369,21 +376,16 @@ Timer UnitCreate a timer obsidian-sync." />
 
 
 
-
       </div>
 
       
+       
       
-      
-      
-      <div class="
-              col-lg-8 col-lg-offset-2
-              col-md-10 col-md-offset-1
-              sidebar-container">
-
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
         
-        
-        <section>
+         <section>
   
   
   <hr class="hidden-sm hidden-xs">
@@ -391,9 +393,15 @@ Timer UnitCreate a timer obsidian-sync." />
   <h5>FEATURED TAGS</h5>
   <div class="tags">
     
+    <a href="/tags/api/">api</a>
+    
     <a href="/tags/css/">css</a>
     
     <a href="/tags/data-science/">data-science</a>
+    
+    <a href="/tags/development/">development</a>
+    
+    <a href="/tags/devops/">devops</a>
     
     <a href="/tags/documentation/">documentation</a>
     
@@ -409,11 +417,17 @@ Timer UnitCreate a timer obsidian-sync." />
     
     <a href="/tags/markdown/">markdown</a>
     
+    <a href="/tags/microservices/">microservices</a>
+    
     <a href="/tags/privacy/">privacy</a>
+    
+    <a href="/tags/programming/">programming</a>
     
     <a href="/tags/python/">python</a>
     
     <a href="/tags/python3.10/">python3.10</a>
+    
+    <a href="/tags/security/">security</a>
     
     <a href="/tags/shortcodes/">shortcodes</a>
     
@@ -447,24 +461,30 @@ Timer UnitCreate a timer obsidian-sync." />
     </div>
   </div>
 </article>
-  
-  <div id="disqus_thread">
+
+<div id="disqus_thread">
   <script>
-      
+    
 
-      
+    
 
-      (function() { 
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-www-munish-mehta-com.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
+    (function () {
+      
+      var d = document,
+        s = d.createElement("script");
+      s.src = "https://https-www-munish-mehta-com.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
       (d.head || d.body).appendChild(s);
-      })();
+    })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-  
-
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+</div>
+ 
 
   
 <footer>
@@ -559,19 +579,6 @@ Timer UnitCreate a timer obsidian-sync." />
 
 
 
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZRV174YST"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-2ZRV174YST', { 'anonymize_ip': false });
-}
-</script>
 
 
 

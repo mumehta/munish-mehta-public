@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Devops Mantra</title>
-    <link>https://www.munish-mehta.com/series/</link>
+    <link>http://localhost:1313/series/</link>
     <description>Recent content in Series on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Nov 2022 12:00:35 +1100</lastBuildDate><atom:link href="https://www.munish-mehta.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 12:00:35 +1100</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Obsidian</title>
-      <link>https://www.munish-mehta.com/series/obsidian/</link>
+      <link>http://localhost:1313/series/obsidian/</link>
       <pubDate>Sun, 06 Nov 2022 12:00:35 +1100</pubDate>
       
-      <guid>https://www.munish-mehta.com/series/obsidian/</guid>
+      <guid>http://localhost:1313/series/obsidian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aws</title>
-      <link>https://www.munish-mehta.com/series/aws/</link>
+      <link>http://localhost:1313/series/aws/</link>
       <pubDate>Sun, 11 Sep 2022 19:18:20 +1000</pubDate>
       
-      <guid>https://www.munish-mehta.com/series/aws/</guid>
+      <guid>http://localhost:1313/series/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Themes Guide</title>
-      <link>https://www.munish-mehta.com/series/themes-guide/</link>
+      <link>http://localhost:1313/series/themes-guide/</link>
       <pubDate>Tue, 09 Aug 2022 15:38:30 +0800</pubDate>
       
-      <guid>https://www.munish-mehta.com/series/themes-guide/</guid>
+      <guid>http://localhost:1313/series/themes-guide/</guid>
       <description></description>
     </item>
     

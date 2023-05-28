@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,10 +29,10 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
 <meta property="og:description" content="Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.
 What is ObsidianObsidian is a note-taking app with a focus on privacy and flexibility. All your notes live on your machine (or wherever you choose to sync them to)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.munish-mehta.com/posts/obsidian-sync/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://localhost:1313/posts/obsidian-sync/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-12T09:27:35+10:00" />
 <meta property="article:modified_time" content="2022-09-12T09:27:35+10:00" />
-<meta property="og:see_also" content="https://www.munish-mehta.com/posts/obsidian-sync-part3/" /><meta property="og:see_also" content="https://www.munish-mehta.com/posts/obsidian-sync-part2/" />
+<meta property="og:see_also" content="http://localhost:1313/posts/obsidian-sync-part3/" /><meta property="og:see_also" content="http://localhost:1313/posts/obsidian-sync-part2/" />
 
 
 
@@ -102,7 +102,7 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://www.munish-mehta.com/">Devops Mantra</a>
+      <a class="navbar-brand" href="http://localhost:1313/">Devops Mantra</a>
     </div>
     
     <div id="huxblog_navbar">
@@ -238,13 +238,11 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
 <article>
   <div class="container">
     <div class="row">
-
       
-      <div class="
-              col-lg-8 col-lg-offset-2
-              col-md-10 col-md-offset-1
-              post-container">
-        <p>Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.</p>
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+         <p>Obsidian-sync is a three part series describing a setup for automated push to remote git repository. Although the subject is obsidian automated push to remote repository, it can be applied, in general, to any other place where automated push may be required.</p>
 <h1 id="what-is-obsidian">What is Obsidian<a class="anchorjs-link" href="#what-is-obsidian"></a></h1><p><a href="https://obsidian.md/">Obsidian</a> is a note-taking app with a focus on privacy and flexibility. All your notes live on your machine (or wherever you choose to sync them to). Notes are written in markdown, meaning they can be easily converted to other formats or moved to another app. As of writing, it is free for personal use but not open-source. It works cross-platform on Windows, macOS, Linux, iOS and Android.</p>
 <p><a href="https://obsidian.md/">Obsidian</a> is not only an extremely useful text editing tool, but also a <strong>powerful knowledge base</strong> ; however, I will not discuss the <strong>knowledge base</strong> here, mainly based on its extreme text editing experience, combined with my short practical experience, to Share the advantages of Obsidian with your friends:</p>
 <ul>
@@ -260,29 +258,38 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
 <p>I love Obsidian for its command palette, customizable hotkeys, vim key bindings and versatile community plugins. Together, these features make the user experience similar to that of <a href="https://code.visualstudio.com/">Visual Studio Code</a>, the source code editor I use daily as a software engineer.</p>
 <p>I am going to focus on remote state management feature of Obsidian here.</p>
 <h2 id="remote-state-management-for-obsidian">Remote state management for obsidian<a class="anchorjs-link" href="#remote-state-management-for-obsidian"></a></h2><p>With obsidian you can manage remote state in a git repository and get back your contents by doing git pull. This means this you can get your notes anywhere and anytime. I have installed the <a href="https://github.com/denolehov/obsidian-git">git plugin</a> and can do the push of obsidian-vault to my private git repo. The instructions on the plugin page are self explantory and you can set this up for yourself. After setup you can open command palate and execute git push to push your notes to remote git repository. It works good in my experience however, i am such as lazy person and often forget to <code>commit/push</code> and therefore i wanted an automated way to push all my changes at the end of the day by itself.</p>
-<p>I have setup my system for automated push at <code>5 pm everyday</code> and you can tweek this as per your liking. <a href="https://www.munish-mehta.com/posts/obsidian-sync-part2/" title="Obsidian Sync script">part-2</a> below</p>
+<p>I have setup my system for automated push at <code>5 pm everyday</code> and you can tweek this as per your liking. <a href="http://localhost:1313/posts/obsidian-sync-part2/" title="Obsidian Sync script">part-2</a> below</p>
 
 
-        <hr style="visibility: hidden;" />
+        <hr style="visibility: hidden" />
         <ul class="pager">
           
           <li class="previous">
-            <a href="/posts/getting-started-with-aws/" data-toggle="tooltip" data-placement="top" title="Getting Started With AWS">
-              Previous<br>
+            <a
+              href="/posts/getting-started-with-aws/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Getting Started With AWS"
+            >
+              Previous<br />
               <span>Getting Started With AWS</span>
             </a>
           </li>
-          
-          
+           
           <li class="next">
-            <a href="/posts/obsidian-sync-part2/" data-toggle="tooltip" data-placement="top" title="Obsidian Sync script">
-              Next<br>
+            <a
+              href="/posts/obsidian-sync-part2/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Obsidian Sync script"
+            >
+              Next<br />
               <span>Obsidian Sync script</span>
             </a>
           </li>
           
         </ul>
-        <hr style="visibility: hidden;" />
+        <hr style="visibility: hidden" />
 
         
         
@@ -312,21 +319,16 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
 
 
 
-
       </div>
 
       
+       
       
-      
-      
-      <div class="
-              col-lg-8 col-lg-offset-2
-              col-md-10 col-md-offset-1
-              sidebar-container">
-
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
         
-        
-        <section>
+         <section>
   
   
   <hr class="hidden-sm hidden-xs">
@@ -334,9 +336,15 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
   <h5>FEATURED TAGS</h5>
   <div class="tags">
     
+    <a href="/tags/api/">api</a>
+    
     <a href="/tags/css/">css</a>
     
     <a href="/tags/data-science/">data-science</a>
+    
+    <a href="/tags/development/">development</a>
+    
+    <a href="/tags/devops/">devops</a>
     
     <a href="/tags/documentation/">documentation</a>
     
@@ -352,11 +360,17 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
     
     <a href="/tags/markdown/">markdown</a>
     
+    <a href="/tags/microservices/">microservices</a>
+    
     <a href="/tags/privacy/">privacy</a>
+    
+    <a href="/tags/programming/">programming</a>
     
     <a href="/tags/python/">python</a>
     
     <a href="/tags/python3.10/">python3.10</a>
+    
+    <a href="/tags/security/">security</a>
     
     <a href="/tags/shortcodes/">shortcodes</a>
     
@@ -390,24 +404,30 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
     </div>
   </div>
 </article>
-  
-  <div id="disqus_thread">
+
+<div id="disqus_thread">
   <script>
-      
+    
 
-      
+    
 
-      (function() { 
-      var d = document, s = d.createElement('script');
-      s.src = 'https://https-www-munish-mehta-com.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
+    (function () {
+      
+      var d = document,
+        s = d.createElement("script");
+      s.src = "https://https-www-munish-mehta-com.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
       (d.head || d.body).appendChild(s);
-      })();
+    })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-  
-
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+</div>
+ 
 
   
 <footer>
@@ -502,19 +522,6 @@ What is ObsidianObsidian is a note-taking app with a focus on privacy and flexi
 
 
 
-
-
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZRV174YST"></script>
-<script>
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'G-2ZRV174YST', { 'anonymize_ip': false });
-}
-</script>
 
 
 

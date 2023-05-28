@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  
+    
+  
+
+  <title>Unsung Heros of Interconnected world - APIs | Devops Mantra</title>
+
+  
+  <meta name="author" content="Munish Mehta">
+  
+  <meta name="description" content="In this series of article i would be explaining what is an API and what are the uses. How is it useful and what are the types of APIs. In other  parts of the series i would be discussing other aspects of API such as authenication and authorization, securing API, data validation, rate limiting and throttling, error handling and logging, secure storage solutions, least previlages prinicples, security testing, regular updates and patching and api documentation and education.">
+  <meta name="keywords" content="blog,developer,personal">
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Unsung Heros of Interconnected world - APIs"/>
+<meta name="twitter:description" content="In this series of article i would be explaining what is an API and what are the uses. How is it useful and what are the types of APIs. In other  parts of the series i would be discussing other aspects of API such as authenication and authorization, securing API, data validation, rate limiting and throttling, error handling and logging, secure storage solutions, least previlages prinicples, security testing, regular updates and patching and api documentation and education."/>
+
+  <meta property="og:title" content="Unsung Heros of Interconnected world - APIs" />
+<meta property="og:description" content="In this series of article i would be explaining what is an API and what are the uses. How is it useful and what are the types of APIs. In other  parts of the series i would be discussing other aspects of API such as authenication and authorization, securing API, data validation, rate limiting and throttling, error handling and logging, secure storage solutions, least previlages prinicples, security testing, regular updates and patching and api documentation and education." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/api/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-29T00:26:41+10:00" />
+<meta property="article:modified_time" content="2023-05-29T00:26:41+10:00" />
+
+
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
+  
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
+
+  
+  
+  <link rel="stylesheet" href="/sass/main.css">
+
+  
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  
+
+  <script src="/js/lazysizes.min.js"></script>
+
+  
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  
+  <script>
+    var ALGOLIA_INSIGHTS_SRC = "https://cdn.jsdelivr.net/npm/search-insights@2.2.1";
+
+    !function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){
+    (e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],
+    i.async=1,i.src=n,c.parentNode.insertBefore(i,c)
+    }(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");
+    </script>
+  
+</head>
+
+
+
+<body ontouchstart="">
+
+  
+  
+  
+
+  
+
+  
+  
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">Devops Mantra</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archive">Archive</a></li>
+          
+          <li><a href="/series/themes-guide/" title="Guide">Guide</a></li>
+          
+          <li><a href="/about/" title="About">About</a></li>
+          
+          <li><a href="https://github.com/mumehta/" title="Github">Github</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('');
+  }
+</style>
+
+<header class="intro-header style-text">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/api/" title="api">api</a>
+            
+            <a class="tag" href="/tags/programming/" title="programming">programming</a>
+            
+            <a class="tag" href="/tags/devops/" title="devops">devops</a>
+            
+            <a class="tag" href="/tags/python/" title="python">python</a>
+            
+            <a class="tag" href="/tags/development/" title="development">development</a>
+            
+            <a class="tag" href="/tags/microservices/" title="microservices">microservices</a>
+            
+            <a class="tag" href="/tags/security/" title="security">security</a>
+            
+          </div>
+          <h1>Unsung Heros of Interconnected world - APIs</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  Munish Mehta 
+            on Mon, May 29, 2023 <a href="#disqus_thread" style="color:red;flex: 1; text-align: right; white-space: nowrap; float: right"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+      
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+         <p><em>In this series of article i would be explaining what is an API and what are the uses. How is it useful and what are the types of APIs. In other parts of the series i would be discussing other aspects of API such as authenication and authorization, securing API, data validation, rate limiting and throttling, error handling and logging, secure storage solutions, least previlages prinicples, security testing, regular updates and patching and api documentation and education.</em></p>
+<p><figure>
+  <a class="paragraph-image">
+    <img data-src="/images/apis/API.jpg" data-action="zoom" alt="API"  class="lazyload">
+  </a>
+  
+</figure>
+(source: <a href="https://www.akana.com">www.akana.com</a>)</p>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#demystifying-api">Demystifying API</a>
+      <ul>
+        <li><a href="#what-is-an-api---definition">What is an API - Definition</a></li>
+        <li><a href="#understanding-the-meaning-of-api">Understanding the meaning of API</a>
+          <ul>
+            <li><a href="#travel-agency">Travel agency</a></li>
+            <li><a href="#the-function-or-method-as-an-api">The function or method as an API</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#what-are-the-use-cases-of-apis-and-where-they-are-used">What are the Use cases of APIs and where they are used?</a></li>
+    <li><a href="#types-of-apis">Types of APIs</a></li>
+    <li><a href="#how-to-develop-an-api">How to develop an API</a></li>
+    <li><a href="#closing-comments">Closing Comments</a></li>
+  </ul>
+</nav>
+
+<h2 id="demystifying-api">Demystifying API<a class="anchorjs-link" href="#demystifying-api"></a></h2><p>In the ever-evolving digital landscape, where interconnectedness and seamless integration reign supreme, APIs (Application Programming Interfaces) have emerged as the unsung heroes behind the scenes. These ingenious lines of code serve as the gateway to a world of limitless possibilities, enabling different software systems to communicate, share data, and collaborate effortlessly. From powering the apps on your smartphone to revolutionizing industries across the globe, APIs have become the invisible threads that weave our digital experiences together.</p>
+<h3 id="what-is-an-api---definition">What is an API - Definition<a class="anchorjs-link" href="#what-is-an-api---definition"></a></h3><p>An API is a connection between <a href="https://en.wikipedia.org/wiki/Computer">computers</a> or between <a href="https://en.wikipedia.org/wiki/Computer_program">computer programs</a>. It is a type of software <a href="https://en.wikipedia.org/wiki/Interface_(computing)">interface</a>, offering a service to other pieces of <a href="https://en.wikipedia.org/wiki/Software">software</a>.
+(source: wikipedia)</p>
+<h3 id="understanding-the-meaning-of-api">Understanding the meaning of API<a class="anchorjs-link" href="#understanding-the-meaning-of-api"></a></h3><p>The Definition may not make the meaning absolutely clear what exactly is an API. Lets try to understand what exactly API may mean. The first example would be a real world example while second would suit more someone who is familiar with programming.</p>
+<h4 id="travel-agency">Travel agency<a class="anchorjs-link" href="#travel-agency"></a></h4><p>Let&rsquo;s consider a travel analogy to explain APIs in layman&rsquo;s terms. Imagine you&rsquo;re planning a vacation and you want to book a flight. You visit a travel website or app and enter your travel details like the departure city, destination, and dates. Behind the scenes, the travel website interacts with various airline APIs.</p>
+<p>Think of these APIs as travel agents who have access to the airlines&rsquo; systems. The website sends your travel details to the airline APIs, and they retrieve information about available flights, prices, and schedules from the airlines&rsquo; databases. The APIs then gather all the relevant options and send them back to the travel website.</p>
+<p>Now, you see a list of flights with different prices and timings on the website. When you select a flight and proceed to book it, the travel website once again uses the API to communicate with the airline, providing your booking details. The API confirms the reservation, reserves your seat, and sends back a confirmation number that you receive on the website.</p>
+<p><figure>
+  <a class="paragraph-image">
+    <img data-src="/images/apis/Travel_agent_api.jpg" data-action="zoom" alt="Travel_agent_api"  class="lazyload">
+  </a>
+  
+</figure></p>
+<p>In this scenario, the travel website acts as a middleman, using APIs to connect and communicate with multiple airlines, retrieving information, and facilitating the booking process. Without APIs, you would have to individually visit each airline&rsquo;s website, search for flights, compare prices, and manually make bookings—a time-consuming and cumbersome process. APIs make it easier for you to access and interact with multiple airline systems through a single platform, streamlining the entire travel booking experience.</p>
+<h4 id="the-function-or-method-as-an-api">The function or method as an API<a class="anchorjs-link" href="#the-function-or-method-as-an-api"></a></h4><p>Let&rsquo;s consider a function. This function may expect two parameters, first being <code>string</code> type and other is <code>integer</code> type and the function may return a type of <code>float</code>. In order to get an output from this function, the callee has to confirm to input of same type and should receive an output of return type and store in compatible <code>float</code> type of variable. Otherwise the call would have error out. Therefore, function input parameters and output parameters can be considered equivalent to service signatures or contract. This contract is offered to anyone who is expecting output from this function. This contract between services is APIs.</p>
+<p><figure>
+  <a class="paragraph-image">
+    <img data-src="/images/apis/function_as_api.jpg" data-action="zoom" alt="function_as_api"  class="lazyload">
+  </a>
+  
+</figure></p>
+<h2 id="what-are-the-use-cases-of-apis-and-where-they-are-used">What are the Use cases of APIs and where they are used?<a class="anchorjs-link" href="#what-are-the-use-cases-of-apis-and-where-they-are-used"></a></h2><p>APIs (Application Programming Interfaces) are used across various industries and applications. Some common use cases and industries where APIs are widely utilized:</p>
+<ol>
+<li><strong>Social Media</strong>: Social media platforms like Facebook, Twitter, and Instagram provide APIs that allow developers to integrate their applications with these platforms. This enables functionalities such as sharing content, retrieving user data, and posting updates.</li>
+<li><strong>E-commerce</strong>: APIs are extensively used in the e-commerce industry for tasks such as product catalog management, payment processing, inventory management, and order fulfillment. Popular e-commerce platforms like Shopify and WooCommerce offer APIs for developers to build custom integrations and extend their functionality.</li>
+<li><strong>Mapping and Geolocation</strong>: APIs like Google Maps and Mapbox provide geolocation services, mapping functionality, and route planning capabilities. These APIs are commonly used in ride-sharing apps, food delivery services, and location-based services.</li>
+<li><strong>Payment Gateways</strong>: Payment gateways like PayPal, Stripe, and Braintree offer APIs that enable secure and seamless online transactions. These APIs are used in e-commerce platforms, mobile payment apps, and other digital payment systems.</li>
+<li><strong>Weather and Forecasting</strong>: Weather APIs, such as those provided by OpenWeatherMap or The Weather Channel, offer access to real-time weather data, forecasts, and historical weather information. These APIs are used in weather apps, travel planning tools, and agricultural applications.</li>
+<li><strong>Communication and Messaging</strong>: APIs like Twilio and Nexmo provide SMS, voice, and video communication capabilities. They are used in applications for sending notifications, verifying users&rsquo; phone numbers, and enabling voice or video calls.</li>
+<li><strong>Travel and Hospitality</strong>: APIs offered by travel aggregators, airlines, and hotel booking platforms allow developers to integrate travel-related services. These APIs provide access to flight information, hotel availability, pricing, and booking functionalities.</li>
+<li><strong>Financial Services</strong>: Financial institutions and fintech companies utilize APIs for tasks such as accessing account information, initiating transactions, and integrating with payment systems. APIs like Plaid and Open Banking APIs enable secure data exchange between financial institutions and third-party applications.</li>
+<li><strong>Healthcare</strong>: APIs are used in healthcare for interoperability between different systems, enabling secure sharing of patient data, appointment scheduling, accessing electronic health records, and integrating with telemedicine platforms.</li>
+<li><strong>Internet of Things (IoT)</strong>: APIs play a crucial role in connecting and controlling IoT devices. They facilitate communication between devices, sensors, and platforms, enabling data collection, remote monitoring, and control of IoT systems.</li>
+</ol>
+<p>These are just a few examples, as APIs have diverse use cases across industries such as transportation, education, entertainment, energy management, and more. APIs provide a means to integrate, extend, and leverage the functionality of existing systems and services, making them invaluable tools in the digital world.</p>
+<h2 id="types-of-apis">Types of APIs<a class="anchorjs-link" href="#types-of-apis"></a></h2><p>There are several types of APIs, each serving different purposes and catering to specific requirements. Some common types of APIs:</p>
+<ol>
+<li><strong>Web APIs</strong>: Web APIs, also known as HTTP APIs or REST APIs, are the most prevalent type of APIs. They enable communication and data exchange over the internet using standard web protocols such as HTTP. Web APIs are typically accessed via URLs and return data in formats like JSON or XML. They are widely used for building web applications, mobile apps, and integrating with various online services.</li>
+<li><strong>SOAP APIs</strong>: Simple Object Access Protocol (SOAP) APIs are a type of web service API that use the SOAP protocol for communication. SOAP APIs are based on XML and provide a more structured and standardized way of exchanging data between applications. They are commonly used in enterprise systems and environments where strong data typing and formal contracts are required.</li>
+<li><strong>GraphQL APIs</strong>: GraphQL APIs provide a flexible and efficient way of querying and manipulating data. With GraphQL, clients can specify the exact data requirements they need, and the API responds with precisely that data. This approach minimizes over-fetching or under-fetching of data and allows clients to retrieve multiple resources in a single request. GraphQL APIs are popular for building modern applications and are often used alongside traditional REST APIs.</li>
+<li><strong>Real-time APIs</strong>: Real-time APIs facilitate instant data updates and bi-directional communication between clients and servers. These APIs are crucial for applications that require real-time features, such as chat applications, collaborative tools, or live streaming platforms. Technologies like WebSockets and Server-Sent Events (SSE) are commonly used to implement real-time APIs.</li>
+<li><strong>Library or Framework APIs</strong>: Library or Framework APIs provide a set of pre-built functions and tools that developers can use to build applications within a specific programming language or framework. These APIs offer ready-made solutions and abstract complex functionalities, making development faster and more efficient. Examples include the Standard Library APIs in programming languages like Python or JavaScript, or APIs specific to frameworks like React or Django.</li>
+<li><strong>Platform APIs</strong>: Platform APIs are APIs provided by platforms or services that offer specific functionalities or resources. Examples include social media platform APIs like the Facebook Graph API, cloud service APIs like Amazon Web Services (AWS) API, or payment gateway APIs like PayPal API. Platform APIs allow developers to integrate their applications with these platforms and leverage their features and services.</li>
+<li><strong>Internal APIs</strong>: Internal APIs, also known as private or enterprise APIs, are designed for internal use within an organization. These APIs enable different software systems or modules within the organization to communicate and share data securely. Internal APIs facilitate system integration, streamline business processes, and improve efficiency within an organization.</li>
+</ol>
+<p>These are just a few examples of the types of APIs available. APIs can be further categorized based on their purpose, functionality, and the technologies used to implement them. The choice of API type depends on the specific requirements of the application or system being developed.</p>
+<p>In further articles of this series i would focus attention to <strong>REST Apis</strong> as they are most common ways to develop applications these days.</p>
+<h2 id="how-to-develop-an-api">How to develop an API<a class="anchorjs-link" href="#how-to-develop-an-api"></a></h2><p>Developing an API involves several steps to ensure its functionality, security, and usability. A general outline of the process of developing an API:</p>
+<ol>
+<li><strong>Identify the Purpose and Requirements</strong>: Determine the purpose of your API and what functionalities it needs to provide. Define the specific requirements, such as the data to be accessed, the operations to be performed, and the expected behavior of the API.</li>
+<li><strong>Design the API</strong>: Create a design for your API, including the endpoints, data structures, request/response formats, and authentication/authorization mechanisms. Consider using industry-standard design principles and patterns, such as RESTful design principles for web APIs.</li>
+<li><strong>Choose the Technology Stack</strong>: Select the appropriate programming language, framework, and tools for implementing your API. Consider factors such as the platform it will run on, the scalability requirements, and the existing technology ecosystem in your organization.</li>
+<li><strong>Implement the API</strong>: Develop the API endpoints, data models, and business logic based on the design. Use the chosen programming language and framework to write the code for handling incoming requests, performing operations, and generating appropriate responses.</li>
+<li><strong>Implement Data Persistence</strong>: If your API needs to interact with a database or external data sources, implement the necessary data access layer to retrieve, update, or delete data as required.</li>
+<li><strong>Handle Authentication and Authorization</strong>: Depending on the sensitivity of the data and the intended users of your API, implement appropriate authentication and authorization mechanisms. Common methods include API keys, OAuth, or token-based authentication.</li>
+<li><strong>Ensure Security</strong>: Implement security measures to protect the API against common threats, such as input validation, parameter sanitization, rate limiting, and encryption of sensitive data.</li>
+<li><strong>Test the API</strong>: Thoroughly test your API to ensure it functions as intended and handles various scenarios gracefully. Test input validation, error handling, edge cases, and performance under different loads. Consider using automated testing tools and frameworks.</li>
+<li><strong>Document the API</strong>: Create comprehensive documentation that explains how to use the API, including the available endpoints, request/response formats, authentication requirements, and example use cases. Clear and up-to-date documentation is essential for developers who will be integrating with your API.</li>
+<li><strong>Publish and Deploy the API</strong>: Deploy your API to a production environment or a cloud platform to make it accessible to external users or developers. Consider versioning your API to maintain compatibility and allow for future updates without breaking existing integrations.</li>
+<li><strong>Monitor and Maintain the API</strong>: Continuously monitor the usage and performance of your API, identifying and addressing any issues or bottlenecks. Gather feedback from users and make necessary improvements based on their needs and suggestions.</li>
+</ol>
+<p>Developing an API is an iterative process, and it may require updates and enhancements over time as requirements evolve. Regularly review and update your API to ensure it remains secure, efficient, and aligned with the needs of your users.</p>
+<h2 id="closing-comments">Closing Comments<a class="anchorjs-link" href="#closing-comments"></a></h2><p>In the upcoming parts of series, i would embark on a journey to unravel the fascinating world of APIs, exploring their significance, their transformative potential, and the countless ways in which they shape the way we interact with technology. So fasten your seatbelts and prepare to discover the extraordinary power hidden beneath these three seemingly innocuous letters API in my upcoming article series. The focus will be on how to develop and secure API.</p>
+
+
+        <hr style="visibility: hidden" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a
+              href="/posts/installing-jupyter-notebook-with-virtualenv/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Installing Jupyter Notebook in virtual env"
+            >
+              Previous<br />
+              <span>Installing Jupyter Notebook in virtual env</span>
+            </a>
+          </li>
+           
+        </ul>
+        <hr style="visibility: hidden" />
+
+        
+        
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-www-munish-mehta-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+
+      </div>
+
+      
+       
+      
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        
+         <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/api/">api</a>
+    
+    <a href="/tags/css/">css</a>
+    
+    <a href="/tags/data-science/">data-science</a>
+    
+    <a href="/tags/development/">development</a>
+    
+    <a href="/tags/devops/">devops</a>
+    
+    <a href="/tags/documentation/">documentation</a>
+    
+    <a href="/tags/emoji/">emoji</a>
+    
+    <a href="/tags/guide/">guide</a>
+    
+    <a href="/tags/html/">html</a>
+    
+    <a href="/tags/jupyter-notebook/">jupyter notebook</a>
+    
+    <a href="/tags/linux/">linux</a>
+    
+    <a href="/tags/markdown/">markdown</a>
+    
+    <a href="/tags/microservices/">microservices</a>
+    
+    <a href="/tags/privacy/">privacy</a>
+    
+    <a href="/tags/programming/">programming</a>
+    
+    <a href="/tags/python/">python</a>
+    
+    <a href="/tags/python3.10/">python3.10</a>
+    
+    <a href="/tags/security/">security</a>
+    
+    <a href="/tags/shortcodes/">shortcodes</a>
+    
+    <a href="/tags/text/">text</a>
+    
+    <a href="/tags/venv/">venv</a>
+    
+    <a href="/tags/virtualenv/">virtualenv</a>
+    
+  </div>
+</section>
+
+        
+        
+
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://gohugo.io" target="_blank">Munish Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Divya Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Navya Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Paarth Mehta</a></li>
+  
+</ul>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<div id="disqus_thread">
+  <script>
+    
+
+    
+
+    (function () {
+      
+      var d = document,
+        s = d.createElement("script");
+      s.src = "https://https-www-munish-mehta-com.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+</div>
+ 
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        
+
+
+<ul class="list-inline text-center">
+
+  
+  <li>
+    <a href="/index.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a href="https://twitter.com/MehtaAu">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.facebook.com/munish.mehta1">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/mumehta">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.linkedin.com/in/mehtamunish">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+</ul>
+        <p class="copyright text-muted">
+          Copyright &copy; Devops Mantra 2023
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+  <script id="dsq-count-scr" src="//https-www-munish-mehta-com.disqus.com/count.js" async></script>
+</body>
+
+</html>
