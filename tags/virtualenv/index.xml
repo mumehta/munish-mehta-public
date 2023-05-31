@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>virtualenv on Devops Mantra</title>
-    <link>http://localhost:1313/tags/virtualenv/</link>
+    <link>https://www.munish-mehta.com/tags/virtualenv/</link>
     <description>Recent content in virtualenv on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 29 Apr 2023 21:22:51 +1000</lastBuildDate><atom:link href="http://localhost:1313/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 29 Apr 2023 21:22:51 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing Jupyter Notebook in virtual env</title>
-      <link>http://localhost:1313/posts/installing-jupyter-notebook-with-virtualenv/</link>
+      <link>https://www.munish-mehta.com/posts/installing-jupyter-notebook-with-virtualenv/</link>
       <pubDate>Sat, 29 Apr 2023 21:22:51 +1000</pubDate>
       
-      <guid>http://localhost:1313/posts/installing-jupyter-notebook-with-virtualenv/</guid>
+      <guid>https://www.munish-mehta.com/posts/installing-jupyter-notebook-with-virtualenv/</guid>
       <description>Jupyter Notebook is a popular choice among data scientist and data engineer developing application. There are numerous factors of why Jupyter Notebooks are preferred choice for getting up and running quickly. There are several posts why they do so. This article on real python nicely explains.
 Here i would be describing how to install Jupyter Notebook in a personal laptop and getting up and running quickly. If you aren&amp;rsquo;t familiar with virtual env or venv, you can refer to this post.</description>
     </item>

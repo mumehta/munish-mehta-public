@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>documentation on Devops Mantra</title>
-    <link>http://localhost:1313/tags/documentation/</link>
+    <link>https://www.munish-mehta.com/tags/documentation/</link>
     <description>Recent content in documentation on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 11 Sep 2022 19:18:20 +1000</lastBuildDate><atom:link href="http://localhost:1313/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Sep 2022 19:18:20 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting Started With AWS</title>
-      <link>http://localhost:1313/posts/getting-started-with-aws/</link>
+      <link>https://www.munish-mehta.com/posts/getting-started-with-aws/</link>
       <pubDate>Sun, 11 Sep 2022 19:18:20 +1000</pubDate>
       
-      <guid>http://localhost:1313/posts/getting-started-with-aws/</guid>
+      <guid>https://www.munish-mehta.com/posts/getting-started-with-aws/</guid>
       <description>Confused and Puzzeled how and where to get started?
 No, you are not alone. It is totally natural to get overwhalmed with so many services offered by AWS. Here, i aim to provide just enough information to get started. AWS, or Amazon Web Services does not need any introduction. It is market leader and 80% of cloud workload is on AWS.
 Sometime, i wonder there should be a guide of simple steps that should guide me just enough to get started with my AWS account.</description>
@@ -20,10 +20,10 @@ Sometime, i wonder there should be a guide of simple steps that should guide me 
     
     <item>
       <title>Puppet - Getting Started</title>
-      <link>http://localhost:1313/posts/getting-started/</link>
+      <link>https://www.munish-mehta.com/posts/getting-started/</link>
       <pubDate>Tue, 09 Aug 2022 15:38:30 +0800</pubDate>
       
-      <guid>http://localhost:1313/posts/getting-started/</guid>
+      <guid>https://www.munish-mehta.com/posts/getting-started/</guid>
       <description>&lt;p&gt;Puppet is a responsive, simple and clean &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; theme based on the &lt;a href=&#34;https://github.com/Huxpro/huxpro.github.io&#34;&gt;Huxblog Jekyll theme&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     

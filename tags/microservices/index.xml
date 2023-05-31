@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>microservices on Devops Mantra</title>
-    <link>http://localhost:1313/tags/microservices/</link>
+    <link>https://www.munish-mehta.com/tags/microservices/</link>
     <description>Recent content in microservices on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 29 May 2023 00:26:41 +1000</lastBuildDate><atom:link href="http://localhost:1313/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 May 2023 00:26:41 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/microservices/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unsung Heros of Interconnected world - APIs</title>
-      <link>http://localhost:1313/posts/api/</link>
+      <link>https://www.munish-mehta.com/posts/api/</link>
       <pubDate>Mon, 29 May 2023 00:26:41 +1000</pubDate>
       
-      <guid>http://localhost:1313/posts/api/</guid>
+      <guid>https://www.munish-mehta.com/posts/api/</guid>
       <description>In this series of article i would be explaining what is an API and what are the uses. How is it useful and what are the types of APIs. In other  parts of the series i would be discussing other aspects of API such as authenication and authorization, securing API, data validation, rate limiting and throttling, error handling and logging, secure storage solutions, least previlages prinicples, security testing, regular updates and patching and api documentation and education.</description>
     </item>
     
