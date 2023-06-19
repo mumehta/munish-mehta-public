@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Devops Mantra</title>
+    <link>https://www.munish-mehta.com/tags/git/</link>
+    <description>Recent content in git on Devops Mantra</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Jun 2023 05:20:18 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Essential Questions to Ace Your Next DevOps Job Interview</title>
+      <link>https://www.munish-mehta.com/posts/devops-interview-questions/</link>
+      <pubDate>Mon, 19 Jun 2023 05:20:18 +1000</pubDate>
+      
+      <guid>https://www.munish-mehta.com/posts/devops-interview-questions/</guid>
+      <description>In this article i would like to peek in few of the top interview questions covering DevOps principles, continuous integration, deployment strategies, infrastructure automation, and more to enhance your chances of landing that dream DevOps role.</description>
+    </item>
+    
+  </channel>
+</rss>

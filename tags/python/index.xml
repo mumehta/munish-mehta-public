@@ -6,7 +6,16 @@
     <description>Recent content in python on Devops Mantra</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 15 Jun 2023 15:47:22 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Jun 2023 03:24:38 +1000</lastBuildDate><atom:link href="https://www.munish-mehta.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Encryption for Apis</title>
+      <link>https://www.munish-mehta.com/posts/encryption-for-apis/</link>
+      <pubDate>Tue, 20 Jun 2023 03:24:38 +1000</pubDate>
+      
+      <guid>https://www.munish-mehta.com/posts/encryption-for-apis/</guid>
+      <description>Encryption for APIs is crucial to protect sensitive data, comply with regulations, build trust, mitigate risks, and maintain a strong competitive position in today&amp;rsquo;s security-conscious environment. It safeguards your users&amp;rsquo; information, preserves your reputation, and positions your API as a secure and reliable service.</description>
+    </item>
+    
     <item>
       <title>API Authentication and Authroization</title>
       <link>https://www.munish-mehta.com/posts/api-authentication-vs-authorization/</link>

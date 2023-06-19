@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+       
+
+    <title>Encryption for Apis | Devops Mantra</title>
+
+    
+    <meta name="author" content="Munish Mehta" />
+    
+    <meta
+      name="description"
+      content="Encryption for APIs is crucial to protect sensitive data, comply with regulations, build trust, mitigate risks, and maintain a strong competitive position in today&rsquo;s security-conscious environment. It safeguards your users&rsquo; information, preserves your reputation, and positions your API as a secure and reliable service."
+    />
+    <meta name="keywords" content="blog,developer,personal"> <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Encryption for Apis"/>
+<meta name="twitter:description" content="Encryption for APIs is crucial to protect sensitive data, comply with regulations, build trust, mitigate risks, and maintain a strong competitive position in today&rsquo;s security-conscious environment. It safeguards your users&rsquo; information, preserves your reputation, and positions your API as a secure and reliable service."/>
+
+    <meta property="og:title" content="Encryption for Apis" />
+<meta property="og:description" content="Encryption for APIs is crucial to protect sensitive data, comply with regulations, build trust, mitigate risks, and maintain a strong competitive position in today&rsquo;s security-conscious environment. It safeguards your users&rsquo; information, preserves your reputation, and positions your API as a secure and reliable service." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.munish-mehta.com/posts/encryption-for-apis/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-20T03:24:38+10:00" />
+<meta property="article:modified_time" content="2023-06-20T03:24:38+10:00" />
+
+
+
+    <link
+      rel="stylesheet"
+      href="/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    
+    <link
+      href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+     
+    <link rel="stylesheet" href="/sass/main.css" />
+
+    
+    <link rel="stylesheet" href="/zoomjs/zoom.min.css" />
+
+    
+
+    <script src="/js/lazysizes.min.js"></script>
+
+    
+     
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    
+    <script>
+      var ALGOLIA_INSIGHTS_SRC =
+        "https://cdn.jsdelivr.net/npm/search-insights@2.2.1";
+
+      !(function (e, a, t, n, s, i, c) {
+        (e.AlgoliaAnalyticsObject = s),
+          (e[s] =
+            e[s] ||
+            function () {
+              (e[s].queue = e[s].queue || []).push(arguments);
+            }),
+          (i = a.createElement(t)),
+          (c = a.getElementsByTagName(t)[0]),
+          (i.async = 1),
+          (i.src = n),
+          c.parentNode.insertBefore(i, c);
+      })(window, document, "script", ALGOLIA_INSIGHTS_SRC, "aa");
+    </script>
+    
+    
+    
+    <script>
+      window.chatbaseConfig = {
+        chatbotId: "jEuecU-0jtCPK-0DbxWWW",
+      }
+    </script>
+    <script
+      src="https://www.chatbase.co/embed.min.js"
+      id="jEuecU-0jtCPK-0DbxWWW"
+      defer>
+    </script>
+    
+  </head>
+
+  
+
+  <body ontouchstart="">
+       
+
+    
+    
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top invert">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://www.munish-mehta.com/">Devops Mantra</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archive">Archive</a></li>
+          
+          <li><a href="/series/themes-guide/" title="Guide">Guide</a></li>
+          
+          <li><a href="/about/" title="About">About</a></li>
+          
+          <li><a href="https://github.com/mumehta/" title="Github">Github</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script> 
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('');
+  }
+</style>
+
+<header class="intro-header style-text">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+            <a class="tag" href="/tags/api/" title="api">api</a>
+            
+            <a class="tag" href="/tags/programming/" title="programming">programming</a>
+            
+            <a class="tag" href="/tags/devops/" title="devops">devops</a>
+            
+            <a class="tag" href="/tags/python/" title="python">python</a>
+            
+            <a class="tag" href="/tags/development/" title="development">development</a>
+            
+            <a class="tag" href="/tags/microservices/" title="microservices">microservices</a>
+            
+            <a class="tag" href="/tags/security/" title="security">security</a>
+            
+          </div>
+          <h1>Encryption for Apis</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  Munish Mehta 
+            on Tue, Jun 20, 2023 <a href="#disqus_thread" style="color:red;flex: 1; text-align: right; white-space: nowrap; float: right"></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+
+
+<article>
+  <div class="container">
+    <div class="row">
+      
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 post-container"
+      >
+         <p><em>Encryption for APIs is crucial to protect sensitive data, comply with regulations, build trust, mitigate risks, and maintain a strong competitive position in today&rsquo;s security-conscious environment. It safeguards your users&rsquo; information, preserves your reputation, and positions your API as a secure and reliable service.</em></p>
+<p><figure>
+  <a class="paragraph-image">
+    <img data-src="/images/apis/api_encryption.webp" data-action="zoom" alt="API Encryption"  class="lazyload">
+  </a>
+  
+</figure></p>
+<p style="text-align: center; margin:0;
+   padding:0; margin-bottom:0; margin-top:0;">(Image source: www.tedgustaf.com)</p>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-encryption">What is Encryption?</a>
+      <ul>
+        <li><a href="#how-encryption-works">How Encryption Works?</a></li>
+        <li><a href="#how-are-encryption-keys-generated">How are Encryption Keys Generated?</a></li>
+        <li><a href="#key-terminologies-in-encryption">Key Terminologies in Encryption</a></li>
+      </ul>
+    </li>
+    <li><a href="#why-encryption-is-essentials-for-apis">Why Encryption is essentials for APIs?</a></li>
+    <li><a href="#how-to-encrypt-an-api">How to Encrypt an API?</a></li>
+    <li><a href="#closing-comments">Closing Comments</a></li>
+  </ul>
+</nav>
+
+<h2 id="what-is-encryption">What is Encryption?<a class="anchorjs-link" href="#what-is-encryption"></a></h2><p>Encryption is the process of converting data into a secure and unreadable format, known as ciphertext, to prevent unauthorized access or interception of sensitive information. It ensures that only authorized individuals or systems with the appropriate decryption key can access and understand the original data.</p>
+<p>Most of the websites, email services and search engines such as Google, Yahoo encrypt your data to protect your information. When i say protect data, it means protect data while in transit. The simple indicator of a website is providing such functionality is that you can see a green pad lock in the URL bar of your browser, indicates that website is protected by encryption (or SSL/TLS, Https is an implementation of such protocol). This means any hacker trying to monitor your network traffic would only see encrypted data, which would not make any sense of it. Hence your data is securely transmits to the server of the website you are visiting.</p>
+<p>The server on the receiving side has a corresponding key and can decryt the message sender is sending. There are multiple encryption standards are available, which can be implemented in providing encryption. One such is AES-256, which uses 256 bit key to encrypt and decrypt the data. The simple rule is longer the key, more secure the algorithm would be.</p>
+<h3 id="how-encryption-works">How Encryption Works?<a class="anchorjs-link" href="#how-encryption-works"></a></h3><p>Encryption uses algorithms to scramble your information. It is then transmitted to the receiving party, who is able to decode the message with a key. There are many types of algorithms - AES - 256 is one of them, which all involve different ways of scrambling and then decrypting information.</p>
+<h3 id="how-are-encryption-keys-generated">How are Encryption Keys Generated?<a class="anchorjs-link" href="#how-are-encryption-keys-generated"></a></h3><p>Keys are usually generated with random number generators, or computer algorithms that mimic random number generators. A more complex way that computers can create keys is by using user mouse movement to create unique seeds. Modern systems that have forward secrecy involve generating a fresh key for every session, to add another layer of security.</p>
+<h3 id="key-terminologies-in-encryption">Key Terminologies in Encryption<a class="anchorjs-link" href="#key-terminologies-in-encryption"></a></h3><p><strong>Key:</strong> Random string of bits created specifically for scrambling and unscrambling data. These are used to encrypt and/or decrypt data. Each key is unique and created via algorithm to make sure it is unpredictable. Longer keys are harder to crack. Common key lengths are 128 bits for symmetric key algorithms and 2048 bits for public-key algorithms.</p>
+<ul>
+<li><strong>Private Key (or Symmetric Key):</strong> This means that the encryption and decryption keys are the same. The two parties must have the same key before they can achieve secure communication.</li>
+<li><strong>Public Key:</strong> This means that the encryption key is published and available for anyone to use. Only the receiving party has access to the decryption key that enables them to read the message.</li>
+</ul>
+<p><strong>Cipher:</strong> An algorithm used for encryption or decryption. It is a set of steps that are followed as a procedure to encrypt information. There are two main types of ciphers, block ciphers and stream ciphers.</p>
+<p><strong>Algorithm:</strong> An algorithm is the procedure that the encryption process follows. The specific algorithm is called the cipher, or code. There are many types of encryption algorithms. The encryption’s goal and level of security determines the most effective solution. Triple DES, RSA and Blowfish are some examples of encryption algorithms, or ciphers.</p>
+<p><strong>Decryption:</strong> The process of switching unreadable cipher text to readable information.</p>
+<p><strong>Cryptanalysis:</strong> The study of ciphers and cryptosystems to find weaknesses in them that would allow access to the information without knowing the key or algorithm.</p>
+<p><strong>Frequency Analysis</strong>: A technique used to crack a cipher. Those trying to decrypt a message will study the frequency of letters or groups of letters in a ciphertext. Because some letters occure more often than others, the frequency of letters can reveals parts of the encrypted message. While this method was effective in cracking old encryption methods, it is ineffective against modern encryption.</p>
+<h2 id="why-encryption-is-essentials-for-apis">Why Encryption is essentials for APIs?<a class="anchorjs-link" href="#why-encryption-is-essentials-for-apis"></a></h2><p>Encryption is essentials for APIs for following reasons:</p>
+<ol>
+<li><strong>Confidentiality</strong>: Encryption ensures the confidentiality of sensitive data transmitted over the API. By encrypting the data, it becomes unreadable to anyone who doesn&rsquo;t possess the appropriate decryption key. This helps protect sensitive information from unauthorized access, interception, or eavesdropping.</li>
+<li><strong>Data Integrity</strong>: Encryption can help maintain data integrity by detecting any unauthorized modifications or tampering during transit. With encryption, it becomes difficult for an attacker to modify the encrypted data without detection. If any alterations are made, the decryption process will fail, alerting the recipient to potential tampering.</li>
+<li><strong>Compliance and Regulations</strong>: Many industries, such as healthcare (HIPAA), finance (PCI DSS), and personal data protection (GDPR), have strict regulations and compliance requirements regarding the protection of sensitive data. Encryption is often a requirement to meet these standards and ensure legal compliance.</li>
+<li><strong>Trust and Reputation</strong>: By implementing encryption in your API, you demonstrate a commitment to data security and customer privacy. This builds trust with your users, clients, and partners, enhancing your reputation as a reliable and secure service provider.</li>
+<li><strong>Defense against Attacks</strong>: Encryption serves as a defense mechanism against various attacks, such as man-in-the-middle attacks, data breaches, and unauthorized access attempts. Even if an attacker gains access to the encrypted data, without the proper decryption key, the information remains unreadable and unusable.</li>
+<li><strong>Secure Data Storage</strong>: Encryption is not limited to data transmission but can also be applied to stored data. When sensitive data is stored on servers or databases, encrypting it helps protect the information from unauthorized access in case of a breach or unauthorized system access.</li>
+<li><strong>Legal Protection</strong>: Encryption can offer legal protection in case of data breaches. If encrypted data is compromised, it may not be considered a data breach in some jurisdictions if the encryption was strong and properly implemented. This can mitigate legal consequences and reduce potential liabilities.</li>
+</ol>
+<p>Encryption provides a strong layer of protection for sensitive data, both in transit and at rest, ensuring confidentiality, integrity, compliance, and trust in your API services.</p>
+<h2 id="how-to-encrypt-an-api">How to Encrypt an API?<a class="anchorjs-link" href="#how-to-encrypt-an-api"></a></h2><p>To ensure encryption of APIs, developer can follow these key steps:</p>
+<ol>
+<li><strong>Identify Sensitive Data</strong>: Determine which data elements within your API payload are considered sensitive and require encryption. This could include personally identifiable information (PII), financial data, passwords, or any other confidential information.</li>
+<li><strong>Use Secure Communication Protocols</strong>: Employ secure communication protocols like HTTPS (HTTP over SSL/TLS) to ensure that data transmitted between the client and the API server is encrypted. HTTPS provides encryption and authentication, protecting data from interception and tampering.</li>
+<li><strong>Implement Encryption Algorithms</strong>: Select appropriate encryption algorithms that align with your security requirements. Common choices include AES (Advanced Encryption Standard) for symmetric encryption and RSA (Rivest-Shamir-Adleman) for asymmetric encryption. Ensure that you choose algorithms with sufficient key lengths and security levels.</li>
+<li><strong>Manage Cryptographic Keys</strong>: Properly manage cryptographic keys used for encryption and decryption. Generate strong and unique keys for each API instance or user session. Follow best practices for key storage, rotation, and access control. Consider using a secure key management system or hardware security modules (HSMs) for added protection.</li>
+<li><strong>Utilize Secure Libraries or Frameworks</strong>: Leverage established and trusted cryptographic libraries or frameworks provided by your programming language or platform. These libraries offer tested and reliable encryption functions, reducing the risk of implementation errors and vulnerabilities.</li>
+<li><strong>Encrypt Sensitive Data</strong>: Apply encryption to the identified sensitive data before transmitting or storing it. Utilize the appropriate encryption functions or methods provided by your chosen cryptographic library. Encrypt the data using the selected algorithm and the associated encryption keys.</li>
+<li><strong>Validate and Verify Encryption</strong>: Implement thorough testing and validation procedures to ensure that encryption is functioning correctly. Verify that encrypted data can be decrypted successfully with the appropriate decryption keys. Conduct testing and verification of encryption functionality during development and regularly as part of security assessments.</li>
+<li><strong>Secure Key Distribution</strong>: If you are using asymmetric encryption, securely distribute the public keys to the entities that need to encrypt data for your API. Protect the private keys securely and ensure they are accessible only by authorized processes or systems.</li>
+<li><strong>Regularly Update and Patch</strong>: Stay updated with the latest security patches, updates, and best practices related to encryption libraries, frameworks, and algorithms. Regularly update the encryption components of your API to address known vulnerabilities and improve overall security.</li>
+<li><strong>Follow Security Best Practices</strong>: Encryption is just one aspect of API security. Adhere to other security best practices, such as implementing strong authentication mechanisms, proper access controls, input validation, and secure coding practices. Employ additional security measures like rate limiting, monitoring, and logging to detect and respond to potential security threats.</li>
+</ol>
+<p>If you have followed these steps, APIs are properly encrypted, safeguarding sensitive data and protecting the integrity and confidentiality of the information being transmitted or stored.</p>
+<h2 id="closing-comments">Closing Comments<a class="anchorjs-link" href="#closing-comments"></a></h2><p>In conclusion, encryption plays a vital role in securing APIs and protecting sensitive data from unauthorized access, interception, and tampering. By implementing strong encryption algorithms, managing cryptographic keys effectively, and following secure coding practices, developers can ensure that data transmitted or stored within APIs remains confidential, integral, and compliant with regulatory requirements. Encryption serves as a fundamental building block of API security, instilling trust in users, mitigating risks, and safeguarding the reputation of organizations. As the digital landscape evolves, prioritizing encryption within APIs is no longer an option but a necessity in our increasingly interconnected and data-driven world.</p>
+
+
+        <hr style="visibility: hidden" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a
+              href="/posts/devops-interview-questions/"
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Essential Questions to Ace Your Next DevOps Job Interview"
+            >
+              Previous<br />
+              <span>Essential Questions to Ace Your Next DevOps Job Interview</span>
+            </a>
+          </li>
+           
+        </ul>
+        <hr style="visibility: hidden" />
+
+        
+        
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-www-munish-mehta-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+
+      </div>
+
+      
+       
+      
+      <div
+        class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 sidebar-container"
+      >
+        
+         <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/api/">api</a>
+    
+    <a href="/tags/css/">css</a>
+    
+    <a href="/tags/data-science/">data-science</a>
+    
+    <a href="/tags/development/">development</a>
+    
+    <a href="/tags/devops/">devops</a>
+    
+    <a href="/tags/documentation/">documentation</a>
+    
+    <a href="/tags/emoji/">emoji</a>
+    
+    <a href="/tags/git/">git</a>
+    
+    <a href="/tags/guide/">guide</a>
+    
+    <a href="/tags/html/">html</a>
+    
+    <a href="/tags/interview-questions/">interview questions</a>
+    
+    <a href="/tags/jupyter-notebook/">jupyter notebook</a>
+    
+    <a href="/tags/linux/">linux</a>
+    
+    <a href="/tags/markdown/">markdown</a>
+    
+    <a href="/tags/microservices/">microservices</a>
+    
+    <a href="/tags/privacy/">privacy</a>
+    
+    <a href="/tags/programming/">programming</a>
+    
+    <a href="/tags/python/">python</a>
+    
+    <a href="/tags/python3.10/">python3.10</a>
+    
+    <a href="/tags/security/">security</a>
+    
+    <a href="/tags/shortcodes/">shortcodes</a>
+    
+    <a href="/tags/text/">text</a>
+    
+    <a href="/tags/venv/">venv</a>
+    
+    <a href="/tags/virtualenv/">virtualenv</a>
+    
+  </div>
+</section>
+
+        
+        
+
+<hr>
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+  
+  <li><a href="https://gohugo.io" target="_blank">Munish Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Divya Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Navya Mehta</a></li>
+  
+  <li><a href="https://gohugo.io" target="_blank">Paarth Mehta</a></li>
+  
+</ul>
+
+      </div>
+    </div>
+  </div>
+</article>
+
+<div id="disqus_thread">
+  <script>
+    
+
+    
+
+    (function () {
+      
+      var d = document,
+        s = d.createElement("script");
+      s.src = "https://https-www-munish-mehta-com.disqus.com/embed.js";
+      s.setAttribute("data-timestamp", +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript"
+      >comments powered by Disqus.</a
+    ></noscript
+  >
+</div>
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        
+
+
+<ul class="list-inline text-center">
+
+  
+  <li>
+    <a href="/index.xml">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a href="https://twitter.com/MehtaAu">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  
+  
+  <li>
+    <a target="_blank" href="https://www.facebook.com/munish.mehta1">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://github.com/mumehta">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+  
+  <li>
+    <a target="_blank" href="https://www.linkedin.com/in/mehtamunish">
+      <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  
+</ul>
+        <p class="copyright text-muted">
+          Copyright &copy; Devops Mantra 2023
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src="/js/simple-jekyll-search.min.js"></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZRV174YST"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-2ZRV174YST', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+    <script
+      id="dsq-count-scr"
+      src="//https-www-munish-mehta-com.disqus.com/count.js"
+      async
+    ></script>
+  </body>
+</html>
